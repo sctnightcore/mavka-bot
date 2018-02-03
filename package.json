@@ -1,0 +1,11 @@
+{
+	"name": "ping-pong-bot",
+	"version": "1.0.0",
+	"description": "My first ping-pong-bot",
+	"main": "bot.js",
+	"author": "Vietlubu",
+	"dependencies": {
+		"discord.js": "^11.3.0",
+		"json-query": "^2.2.2"
+	}
+}

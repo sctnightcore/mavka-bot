@@ -1,0 +1,165 @@
+{
+	"20": {
+		"type": "Neutral",
+		"level": "1"
+	},
+	"21": {
+		"type": "Water",
+		"level": "1"
+	},
+	"22": {
+		"type": "Earth",
+		"level": "1"
+	},
+	"23": {
+		"type": "Fire",
+		"level": "1"
+	},
+	"24": {
+		"type": "Wind",
+		"level": "1"
+	},
+	"25": {
+		"type": "Poison",
+		"level": "1"
+	},
+	"26": {
+		"type": "Holy",
+		"level": "1"
+	},
+	"27": {
+		"type": "Shadow",
+		"level": "1"
+	},
+	"28": {
+		"type": "Ghost",
+		"level": "1"
+	},
+	"29": {
+		"type": "Undead",
+		"level": "1"
+	},
+
+	"40": {
+		"type": "Neutral",
+		"level": "2"
+	},
+	"41": {
+		"type": "Water",
+		"level": "2"
+	},
+	"42": {
+		"type": "Earth",
+		"level": "2"
+	},
+	"43": {
+		"type": "Fire",
+		"level": "2"
+	},
+	"44": {
+		"type": "Wind",
+		"level": "2"
+	},
+	"45": {
+		"type": "Poison",
+		"level": "2"
+	},
+	"46": {
+		"type": "Holy",
+		"level": "2"
+	},
+	"47": {
+		"type": "Shadow",
+		"level": "2"
+	},
+	"48": {
+		"type": "Ghost",
+		"level": "2"
+	},
+	"49": {
+		"type": "Undead",
+		"level": "2"
+	},
+
+	"60": {
+		"type": "Neutral",
+		"level": "3"
+	},
+	"61": {
+		"type": "Water",
+		"level": "3"
+	},
+	"62": {
+		"type": "Earth",
+		"level": "3"
+	},
+	"63": {
+		"type": "Fire",
+		"level": "3"
+	},
+	"64": {
+		"type": "Wind",
+		"level": "3"
+	},
+	"65": {
+		"type": "Poison",
+		"level": "3"
+	},
+	"66": {
+		"type": "Holy",
+		"level": "3"
+	},
+	"67": {
+		"type": "Shadow",
+		"level": "3"
+	},
+	"68": {
+		"type": "Ghost",
+		"level": "3"
+	},
+	"69": {
+		"type": "Undead",
+		"level": "3"
+	},
+
+	"80": {
+		"type": "Neutral",
+		"level": "4"
+	},
+	"81": {
+		"type": "Water",
+		"level": "4"
+	},
+	"82": {
+		"type": "Earth",
+		"level": "4"
+	},
+	"83": {
+		"type": "Fire",
+		"level": "4"
+	},
+	"84": {
+		"type": "Wind",
+		"level": "4"
+	},
+	"85": {
+		"type": "Poison",
+		"level": "4"
+	},
+	"86": {
+		"type": "Holy",
+		"level": "4"
+	},
+	"87": {
+		"type": "Shadow",
+		"level": "4"
+	},
+	"88": {
+		"type": "Ghost",
+		"level": "4"
+	},
+	"89": {
+		"type": "Undead",
+		"level": "4"
+	}
+}
