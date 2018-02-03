@@ -36,7 +36,7 @@ module.exports.run = async(bot, message, args, authorID, botID) => {
 		.setTitle("Name: " + monster.name)
 		.setColor("#1abc9c")
 		.setThumbnail("http://file5.ratemyserver.net/mobs/"+ monster.id +".gif")
-		.setURL("http://db.irowiki.org/db/monster-info/"+ monster.id +"/")
+		.setURL("https://www.divine-pride.net/database/monster/"+ monster.id +"/")
 		.setDescription(msgDescription);
 
     message.channel.send(`<@${authorID}>, đây là kết quả mà Mavka tìm thấy cho bạn:`);

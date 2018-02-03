@@ -61,7 +61,7 @@ module.exports.run = async(bot, message, args, authorID, botID) => {
 			.setTitle("Name: " + name)
 			.setColor("#1abc9c")
 			.setThumbnail(image)
-			.setURL("http://db.irowiki.org/db/item-info/"+ item.id +"/")
+			.setURL("https://www.divine-pride.net/database/item/"+ item.id +"/")
 			.setDescription(msgDescription);
 
 		message.channel.send({embed: embed});
