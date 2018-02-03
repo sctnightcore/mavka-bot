@@ -16,6 +16,7 @@ module.exports.run = async(bot, message, args, authorID, botID) => {
 		image = card_image;
 	}
 
+	message.channel.send(`<@${authorID}>, đây là item mà bạn bốc được :yum:\n`);
 	let msgDescription = "Script:\n" +
 						 "`"+card.script+"`";
 
@@ -23,7 +24,7 @@ module.exports.run = async(bot, message, args, authorID, botID) => {
 		.setTitle(card.name_japanese)
 		.setColor("#1abc9c")
 		.setImage(image)
-		.setURL(`http://db.irowiki.org/db/item-info/${card.id}/`)
+		.setURL(`https://www.divine-pride.net/database/item/${card.id}/`)
 		.setDescription(msgDescription);
 
 	message.channel.send({embed: embed});
