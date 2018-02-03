@@ -6,7 +6,7 @@ var config = require('../config.json');
 module.exports.run = async(bot, message, args, authorID, botID) => {
     let entry = args.join(" ").toUpperCase();
 
-    if(!entry) return message.channel.send(`<@${authorID}>, Mavka không tìm thấy item bạn yêu cầu :flushed:`);
+    if(!entry) return message.channel.send(`<@${authorID}>, Mavka không tìm thấy kết quả bạn yêu cầu :flushed:`);
 
     // let msg = await message.channel.send(`Mavka đang tìm kiếm thông tin item...`);
 
@@ -14,9 +14,19 @@ module.exports.run = async(bot, message, args, authorID, botID) => {
 	
 	let items = jsonQuery(query, {data: itemData, allowRegexp: true}).value;
 
+	let total_items = items.length;
+	if (total_items == 0) {
+		return message.channel.send(`<@${authorID}>, Mavka không tìm thấy kết quả bạn yêu cầu :flushed:`);
+	}
+
     message.channel.send(`<@${authorID}>, đây là một số kết quả mà Mavka tìm thấy cho bạn:`);
     
-    for (i = 0; i <= (config.limit_result - 1); i++) {
+    let limit_result = config.limit_result;
+    if (total_items < config.limit_result) {
+		limit_result = total_items
+    }
+
+    for (i = 0; i <= (limit_result - 1); i++) {
         let item = items[i];
 
     	if (item.slots != null) {

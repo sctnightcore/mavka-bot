@@ -5,13 +5,17 @@ const Discord = require('discord.js');
 module.exports.run = async(bot, message, args, authorID, botID) => {
     let entry = args.join(" ").toUpperCase();
 
-    if(!entry) return message.channel.send(`<@${authorID}>, Mavka không tìm thấy item bạn yêu cầu :flushed:`);
+    if(!entry) return message.channel.send(`<@${authorID}>, Bạn phải nhập tên item hoặc ID! :smile: `);
 
     // let msg = await message.channel.send(`Mavka đang tìm kiếm thông tin item...`);
 
 	let query = `[* name_upper = ${entry} | id = ${entry}]`;
 	
-	let result = jsonQuery(query, {data: itemData}).value
+	let result = jsonQuery(query, {data: itemData}).value;
+
+	if (result.length == 0) {
+		return message.channel.send(`<@${authorID}>, Mavka không tìm thấy item bạn yêu cầu :flushed:`);
+	}
 
 	let item = result[0];
 

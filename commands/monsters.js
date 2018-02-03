@@ -12,11 +12,21 @@ module.exports.run = async(bot, message, args, authorID) => {
 
     let query = `[* iName ~/^[^]*${entry}.*/ | id = ${entry}]`;
     
-    let monsters = jsonQuery(query, {data: mobData, allowRegexp: true}).value
+    let monsters = jsonQuery(query, {data: mobData, allowRegexp: true}).value;
+
+    let total_monsters = monsters.length;
+    if (total_monsters == 0) {
+        return message.channel.send(`<@${authorID}>, Mavka không tìm thấy kết quả bạn yêu cầu :flushed:`);
+    }
 
     message.channel.send(`<@${authorID}>, đây là một số kết quả mà Mavka tìm thấy cho bạn:`);
 
-    for (i = 0; i <= (config.limit_result - 1); i++) {
+    let limit_result = config.limit_result;
+    if (total_monsters < config.limit_result) {
+        limit_result = total_monsters
+    }
+
+    for (i = 0; i <= (limit_result - 1); i++) {
         let monster = monsters[i];
 
         let msgDescription = "Mob ID: " + monster.id + "\t" +

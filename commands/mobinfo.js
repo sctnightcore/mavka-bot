@@ -12,7 +12,11 @@ module.exports.run = async(bot, message, args, authorID, botID) => {
 
 	let query = `[* iName = ${entry} | id = ${entry}]`;
 	
-	let result = jsonQuery(query, {data: mobData}).value
+	let result = jsonQuery(query, {data: mobData}).value;
+
+	if (result.length == 0) {
+		return message.channel.send(`<@${authorID}>, Mavka không tìm thấy monster bạn yêu cầu :flushed:`);
+	}
 
 	let monster = result[0];
 
