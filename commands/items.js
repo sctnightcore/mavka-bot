@@ -1,7 +1,9 @@
 const itemData = require("../json/items.json");
+const locations = require('../json/equip_locations.json');
 const jsonQuery = require('json-query');
 const Discord = require('discord.js');
 var config = require('../config.json');
+
 
 module.exports.run = async(bot, message, args, authorID, botID) => {
     let entry = args.join(" ").toUpperCase();
@@ -28,9 +30,9 @@ module.exports.run = async(bot, message, args, authorID, botID) => {
 
     for (i = 0; i <= (limit_result - 1); i++) {
         let item = items[i];
-
+        let name = item.name_japanese;
     	if (item.slots != null) {
-			item.name_japanese = item.name_japanese + `[${item.slots}]`;
+			name = item.name_japanese + `[${item.slots}]`;
 		}
 
 		if (item.price_sell == null && item.price_buy != null) {
@@ -42,11 +44,23 @@ module.exports.run = async(bot, message, args, authorID, botID) => {
 			                 "Sell: " + item.price_sell + "\t" +
 			                 "Weight: " + item.weight + "\n" +
 		                 	 "Script: `" + item.script + "`";
+
+		let image = "https://static.divine-pride.net/images/items/collection/"+ item.id +".png";
+
+		if (item.type == 6) {
+			let card_image = `https://static.divine-pride.net/images/items/cards/${item.id}.png`;
+			let location = locations[item.equip_locations];
+
+			if (location) {
+				name = item.name_japanese + " ["+location+"]";
+				image = card_image;
+			}
+		}
 		
 		let embed = new Discord.RichEmbed()
-			.setTitle("Name: " + item.name_japanese)
+			.setTitle("Name: " + name)
 			.setColor("#1abc9c")
-			.setThumbnail("http://db.irowiki.org/image/item/"+ item.id +".png")
+			.setThumbnail(image)
 			.setURL("http://db.irowiki.org/db/item-info/"+ item.id +"/")
 			.setDescription(msgDescription);
 
