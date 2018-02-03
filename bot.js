@@ -28,10 +28,9 @@ fs.readdir("./commands/", (err, files) => {
     });
 });
 
-
-
 bot.on('ready', () => {
-  console.log(`Logged in as ${bot.user.tag}!`);
+    console.log(`Logged in as ${bot.user.tag}!`);
+    bot.user.setActivity('Farming...');
 });
 
 bot.on('message', message => {
