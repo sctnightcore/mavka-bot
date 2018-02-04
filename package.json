@@ -1,11 +1,23 @@
 {
-	"name": "ping-pong-bot",
+	"name": "mavka-bot",
 	"version": "1.0.0",
-	"description": "My first ping-pong-bot",
+	"description": "Mavka bot - Ragnarok Online misc bot",
 	"main": "bot.js",
-	"author": "Vietlubu",
 	"dependencies": {
 		"discord.js": "^11.3.0",
 		"json-query": "^2.2.2"
-	}
+	},
+	"scripts": {
+		"start": "node bot.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/vietlubu/mavka-bot.git"
+	},
+	"author": "Vietlubu",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/vietlubu/mavka-bot/issues"
+	},
+	"homepage": "https://github.com/vietlubu/mavka-bot#readme"
 }
