@@ -16,7 +16,7 @@ module.exports.run = async(bot, message, args, authorID, botID) => {
 		image = card_image;
 	}
 
-	message.channel.send(`<@${authorID}>, đây là item mà bạn bốc được :yum:\n`);
+	message.channel.send(`<@${authorID}>, đây là card mà bạn rút được :yum:\n`);
 	let msgDescription = "Script:\n" +
 						 "`"+card.script+"`";
 
