@@ -19,7 +19,7 @@ module.exports.run = async(bot, message, args, authorID, botID) => {
 						 "`!items <name>`: Tìm kiếm item.\n" +
 						 "\n" +
 						 "**Misc**\n" +
-						 "`!card`: Hiển thị ngẫy nhiên một card\n" +
+						 "`!card`: Hiển thị ngẫu nhiên một card\n" +
 						 "~~`!npc`: Hiển thị ngẫu nhiên một NPC.~~\n" +
 						 "";
 	
