@@ -20,7 +20,7 @@ module.exports.run = async(bot, message, args, authorID, botID) => {
 						 "\n" +
 						 "**Misc**\n" +
 						 "`!card`: Hiển thị ngẫu nhiên một card\n" +
-						 "~~`!npc`: Hiển thị ngẫu nhiên một NPC.~~\n" +
+						 "`!npc`: Hiển thị ngẫu nhiên một NPC.\n" +
 						 "";
 	
 	let embed = new Discord.RichEmbed()
