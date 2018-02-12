@@ -6,7 +6,7 @@ module.exports.run = async(bot, message, args, authorID, botID) => {
 	let npc = npcs[Math.floor(Math.random() * npcs.length)];
 	// let npc = npcs[36];
 
-	message.channel.send(`<@${authorID}>, đây là npc mà Mavka chọn được cho bạn :no1:\n`);
+	message.channel.send(`<@${authorID}>, đây là npc mà Mavka chọn được cho bạn :grimacing:\n`);
 	let msgDescription = `ID:${npc.id}\n`;
 
 	if (npc.meta.note) {
